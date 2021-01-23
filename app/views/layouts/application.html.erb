@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DonatorBook</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500|Poppins:400,500,600,700|Roboto:400,500" rel="stylesheet"/>
+    <link href="https://cdn.materialdesignicons.com/3.0.39/css/materialdesignicons.min.css" rel="stylesheet" />
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application' %>
+    <script src="https://kit.fontawesome.com/6d90f39943.js"></script>
+  </head>
+
+    <% if user_signed_in? %>
+      <body class="sidebar-mini">
+        <%= render 'layouts/header' %>
+        <%= render 'layouts/sidebar' %>
+        <%= render 'layouts/content_wrapper' %>
+      </body>
+    <% else %>
+      <%= render 'devise/sessions/new_session' %>
+    <% end %>
+</html>

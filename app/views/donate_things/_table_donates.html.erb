@@ -1,0 +1,31 @@
+<table id="myTable_donate_things" class="table dataTable table-striped table-hover" role="grid">
+  <thead class="fixed-header log-header">
+    <tr role="row">
+      <th>Date</th>
+      <th>Donator</th>
+      <th>Kategori</th>
+      <th>Barang</th>
+      <th>Jumlah</th>
+      <th>Aksi</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @donate_things.each do |donate| %>
+      <%= content_tag :tr, id: dom_id(donate) do %>
+        <td><%= donate.date_donate %></td>
+        <td><%= donate.donator %></td>
+        <td><%= donate.category %></td>
+        <td><%= donate.name %></td>
+        <td><%= donate.amount %></td>
+        <td>
+          <span>
+            <%= link_to  'Edit', edit_donate_thing_path(donate), remote: true, data: {toggle: "modal", target: "#donate-add"}, class: 'level-item' %>
+          </span>
+          <span>
+            <%= link_to 'Hapus', donate, method: :delete, data: { confirm: 'Are you sure want to delete this tweet?' }, remote: true %>
+          </span>
+        </td>
+      <% end %>
+    <% end %>
+  </tbody>
+</table>

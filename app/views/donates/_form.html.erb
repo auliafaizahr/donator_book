@@ -1,0 +1,19 @@
+<%= simple_form_for (@donate), remote: true do |f| %>
+  <div class="form-group">
+    <%= f.input :donator, placeholder: "Donator", required: true, input_html: { class: 'form-control' } %>
+  </div>
+  <div class="form-group">
+    <%= f.input :amount, label: "Jumlah Donasi", input_html: { class: 'form-control' } %>
+  </div>
+  <div class="form-group">
+    <label for="">Kategori : </label>
+    <%= f.select :category, Donate.categories.keys, {}, { class: 'form-control' } %>
+  </div>
+  <div class="form-group">
+    <label for="">Tanggal Donasi : </label>
+    <%= f.date_field :date_donate,  { class: 'form-control' } %>
+  </div>
+  <div class="form-group">
+    <%= f.button :submit, class: 'btn btn-outline-primary' %>
+  </div>
+<% end %>

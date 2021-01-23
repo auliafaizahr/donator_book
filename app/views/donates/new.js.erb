@@ -1,0 +1,4 @@
+$(document).ready(function() {
+  $('#donate-add').modal('toggle');
+  $(".modal-body").html("<%= escape_javascript(render partial: 'donates/form') %>");
+});
