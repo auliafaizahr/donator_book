@@ -15,6 +15,7 @@ gem 'simple_form'
 gem 'stisla-rails'
 gem 'turbolinks', '~> 5'
 gem 'webpacker', '~> 4.0'
+gem 'serviceworker-rails'
 gem 'sprockets-rails', :require => 'sprockets/railtie'
 
 group :development, :test do

@@ -1,6 +1,6 @@
 class DonatesController < ApplicationController
   before_action :authenticate_user!
-  before_action :set_donate, only: %i[destroy, edit]
+  before_action :set_donate, only: [:destroy, :edit, :update]
   
   def index
     @donates = Donate.all
@@ -29,6 +29,18 @@ class DonatesController < ApplicationController
   def edit
     respond_to do |format|
       format.js { render layout: false }
+    end
+  end
+
+  def update
+    respond_to do |format|
+      if @donate.update(donate_params)
+        format.html { redirect_to root_path, notice: 'Data was successfully updated.' }
+        format.json { render :index, status: :ok, location: @donate }
+      else
+        format.html { render :edit }
+        format.json { render json: @donate.errors, status: :unprocessable_entity }
+      end
     end
   end
 
