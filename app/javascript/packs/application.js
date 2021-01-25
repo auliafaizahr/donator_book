@@ -6,11 +6,7 @@
 // import 'bootstrap'
 import 'core-js/stable'
 import 'regenerator-runtime/runtime'
-import 'bootstrap/scss/bootstrap.scss'
-import 'admin-lte/dist/css/adminlte.css'
-import '../../../node_modules/datatables.net-bs4/css/dataTables.bootstrap4.min.css'
-import '../../../node_modules/datatables.net-responsive-bs4/css/responsive.bootstrap4.min.css'
-import '../../../node_modules/bootstrap-daterangepicker/daterangepicker.css'
+import '../stylesheets/application.scss'
 
 require("@rails/ujs").start()
 require("turbolinks").start()
@@ -30,24 +26,18 @@ require("bootstrap")
 require("admin-lte")
 require("datatables")
 require("datatables.net-bs4")
-require("../../../node_modules/bootstrap/dist/js/bootstrap.bundle")
-// require("../../../node_modules/admin-lte/dist/js/adminlte")
-require("../../../node_modules/datatables/media/js/jquery.dataTables")
-require("../../../node_modules/datatables.net-bs4/js/dataTables.bootstrap4.min")
-require("../../../node_modules/datatables.net-responsive/js/dataTables.responsive.min")
-// require("../../../node_modules/datatables.net/js/jquery.dataTables.min")
-require("../../../node_modules/datatables.net-responsive-bs4/js/responsive.bootstrap4.min")
-require("../../../node_modules/datatables.net-rowgroup/js/dataTables.rowGroup.min")
+require("bootstrap/dist/js/bootstrap.bundle")
+// require("admin-lte/dist/js/adminlte")
+require("datatables/media/js/jquery.dataTables")
+require("datatables.net-bs4/js/dataTables.bootstrap4.min")
+require("datatables.net-responsive/js/dataTables.responsive.min")
+// require("datatables.net/js/jquery.dataTables.min")
+require("datatables.net-responsive-bs4/js/responsive.bootstrap4.min")
+require("datatables.net-rowgroup/js/dataTables.rowGroup.min")
 require("bootstrap-daterangepicker")
 
 import '../donates/index'
 import '../donate_things/index'
-
-// $(document).on('click', '.sidebar-toggle', function () {
-//   if ($('body').hasClass("sidebar-collapse") && $('body').hasClass("sidebar-open")) {
-//       $('body').addClass("sidebar-closed");
-//   }
-// });
 
 $('body,html').click(function(e){
   if ($('body').hasClass("sidebar-open")) {
