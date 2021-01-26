@@ -27,17 +27,48 @@
       <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu">
         <!-- Add icons to the links using the .nav-icon class
               with font-awesome or any other icon font library -->
-        <li class="nav-item has-treeview menu-open">
-          <a href="#" class="nav-link active">
+        <li class="nav-item">
+          <a href="widgets.html" class="nav-link">
+            <i class="nav-icon fas fa-th"></i>
+            <p>
+              Dashboard
+            </p>
+          </a>
+        </li>
+        <li class="nav-item has-treeview <%= 'menu-open' if ["donates", "donate_things"].include?(controller_name) %> ">
+          <a href="#" class="nav-link <%= 'active' if ["donates", "donate_things"].include?(controller_name) %>">
             <i class="nav-icon fas fa-tachometer-alt"></i>
             <p>
-              Report
+              Pemasukan
               <i class="right fas fa-angle-left"></i>
             </p>
           </a>
           <ul class="nav nav-treeview">
             <li class="nav-item">
-              <%= link_to  donates_path, class: current_class?(donates_path) do %>
+              <%= link_to donates_path, class: current_class?(donates_path) do %>
+                <i class="far fa-circle nav-icon"></i>
+                <p>Donasi Dana</p>
+              <% end %>
+            </li>
+            <li class="nav-item">
+              <%= link_to  donate_things_path, class: current_class?(donate_things_path) do %>
+                <i class="far fa-circle nav-icon"></i>
+                <p>Donasi non Dana</p>
+              <% end %>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item has-treeview <%= 'menu-open' if ["output_donates"].include?(controller_name) %>" >
+          <a href="#" class="nav-link <%= 'active' if ["output_donates"].include?(controller_name) %>">
+            <i class="nav-icon fas fa-tachometer-alt"></i>
+            <p>
+              Pengeluaran
+              <i class="right fas fa-angle-left"></i>
+            </p>
+          </a>
+          <ul class="nav nav-treeview">
+            <li class="nav-item">
+              <%= link_to  donates_path, class: current_class?(output_donates_path) do %>
                 <i class="far fa-circle nav-icon"></i>
                 <p>Donasi Dana</p>
               <% end %>

@@ -2,6 +2,7 @@ Rails.application.routes.draw do
 
   resources :donates
   resources :donate_things
+  resources :output_donates
   devise_for :users, controllers: {
     sessions: 'users/sessions'
   }
