@@ -1,0 +1,37 @@
+<div class="table-responsive">
+<table id="myTable_output" class="table dataTable table-striped table-hover" style="width:100%" role="grid">
+  <thead class="fixed-header log-header">
+    <tr role="row">
+      <th>Kebutuhan</th>
+      <th>Jumlah</th>
+      <th>Tanggal</th>
+      <th>Aksi</th>
+    </tr>
+  </thead>
+  <tbody>
+   <% @outputs.each do |donate| %>
+      <%= content_tag :tr, id: dom_id(donate) do %>
+        <td><%= donate.needs %></td>
+        <td><%= donate.amount %></td>
+        <td><%= donate.date_used %></td>
+        <td>
+          <span>
+            <%= link_to  'Edit', edit_output_donate_path(donate), remote: true, data: {toggle: "modal", target: "#donate-add"}, class: 'level-item' %>
+          </span>
+          <span>
+            <%= link_to 'Hapus', output_donate_path(donate), method: :delete, data: { confirm: 'Are you sure want to delete this tweet?' }, remote: true %>
+          </span>
+        </td>
+      <% end %>
+    <% end %>
+  </tbody>
+  <tfoot>
+    <tr>
+      <th style="text-align:right" colspan="2">Total:</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </tfoot>
+</table>
+</div>
+

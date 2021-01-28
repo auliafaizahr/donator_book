@@ -38,6 +38,7 @@ require("bootstrap-daterangepicker")
 
 import '../donates/index'
 import '../donate_things/index'
+import '../output_donates/index'
 
 $('body,html').click(function(e){
   if ($('body').hasClass("sidebar-open")) {

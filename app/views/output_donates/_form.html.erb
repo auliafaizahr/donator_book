@@ -1,0 +1,15 @@
+<%= simple_form_for @output, url: (@output.new_record? ? output_donates_path : output_donate_path(@output) ), remote: true do |f| %>
+  <div class="form-group">
+    <label for="">Tanggal </label>
+    <%= f.date_field :date_used,  { class: 'form-control' } %>
+  </div>
+  <div class="form-group">
+    <%= f.input :needs, placeholder: "Keterangan", required: true, input_html: { class: 'form-control' } %>
+  </div>
+  <div class="form-group">
+    <%= f.input :amount, label: "Jumlah", input_html: { class: 'form-control' } %>
+  </div>
+  <div class="form-group">
+    <%= f.button :submit, class: 'btn btn-outline-primary' %>
+  </div>
+<% end %>

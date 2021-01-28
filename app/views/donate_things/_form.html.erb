@@ -17,6 +17,9 @@
     <%= f.input :amount, label: "Jumlah Donasi", input_html: { class: 'form-control' } %>
   </div>
   <div class="form-group">
+    <%= f.file_field :image, label: "Foto", input_html: { class: 'form-control' } %>
+  </div>
+  <div class="form-group">
     <%= f.button :submit, class: 'btn btn-outline-primary' %>
   </div>
 <% end %>
