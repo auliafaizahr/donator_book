@@ -1,19 +1,4 @@
 $(document).on('turbolinks:load', function() {
-  // $('#myTable_donate_things thead tr').clone(true).appendTo( '#myTable_donate_things thead' );
-  // $('#myTable_donate_things thead tr:eq(1) th').each( function (i) {
-  //   var title = $(this).text();
-  //   $(this).html( '<input type="text" placeholder="Search '+title+'" />' );
-
-  //   $( 'input', this ).on( 'keyup change', function () {
-  //     if ( table.column(i).search() !== this.value ) {
-  //       table
-  //           .column(i)
-  //           .search( this.value )
-  //           .draw();
-  //     }
-  //   } );
-  // } );
-
   var table = $('#myTable_donate_things').DataTable( {
       orderCellsTop: true,
       fixedHeader: true,

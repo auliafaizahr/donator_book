@@ -23,15 +23,14 @@ global.$ = global.jQuery = jQuery;
 window.$ = window.jQuery = jQuery;
 
 require("bootstrap")
+require("chart.js/dist/Chart")
 require("admin-lte")
 require("datatables")
 require("datatables.net-bs4")
 require("bootstrap/dist/js/bootstrap.bundle")
-// require("admin-lte/dist/js/adminlte")
 require("datatables/media/js/jquery.dataTables")
 require("datatables.net-bs4/js/dataTables.bootstrap4.min")
 require("datatables.net-responsive/js/dataTables.responsive.min")
-// require("datatables.net/js/jquery.dataTables.min")
 require("datatables.net-responsive-bs4/js/responsive.bootstrap4.min")
 require("datatables.net-rowgroup/js/dataTables.rowGroup.min")
 require("bootstrap-daterangepicker")
@@ -39,6 +38,7 @@ require("bootstrap-daterangepicker")
 import '../donates/index'
 import '../donate_things/index'
 import '../output_donates/index'
+import '../dashboards/index'
 
 $('body,html').click(function(e){
   if ($('body').hasClass("sidebar-open")) {
