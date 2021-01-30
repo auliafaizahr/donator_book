@@ -1,4 +1,4 @@
-$(function() {
+$(document).on('turbolinks:load', function() {
   const ctx = document.getElementById('chartDonate');
   const donutChart = new Chart(ctx, {
     type: 'doughnut',
@@ -19,7 +19,7 @@ $(function() {
   })
 });
 
-$(function() {
+$(document).on('turbolinks:load', function() {
   const ctx = document.getElementById('chartThings');
   const donutChart = new Chart(ctx, {
     type: 'doughnut',

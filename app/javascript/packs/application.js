@@ -23,10 +23,10 @@ global.$ = global.jQuery = jQuery;
 window.$ = window.jQuery = jQuery;
 
 require("bootstrap")
-require("chart.js/dist/Chart")
 require("admin-lte")
 require("datatables")
 require("datatables.net-bs4")
+require("chart.js/dist/Chart")
 require("bootstrap/dist/js/bootstrap.bundle")
 require("datatables/media/js/jquery.dataTables")
 require("datatables.net-bs4/js/dataTables.bootstrap4.min")
@@ -40,13 +40,13 @@ import '../donate_things/index'
 import '../output_donates/index'
 import '../dashboards/index'
 
-$('body,html').click(function(e){
-  if ($('body').hasClass("sidebar-open")) {
-    $('body').addClass("sidebar-closed");
-    $('body').removeClass("sidebar-collapse");
-    $('body').removeClass("sidebar-open");
-  }
-});
+// $('body,html').click(function(e){
+//   if ($('body').hasClass("sidebar-open")) {
+//     $('body').addClass("sidebar-closed");
+//     $('body').removeClass("sidebar-collapse");
+//     $('body').removeClass("sidebar-open");
+//   }
+// });
 
 // import './alert'
 
