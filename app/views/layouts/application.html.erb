@@ -20,9 +20,11 @@
 
     <% if user_signed_in? %>
       <body class="sidebar-mini">
-        <%= render 'layouts/header' %>
-        <%= render 'layouts/sidebar' %>
-        <%= render 'layouts/content_wrapper' %>
+        <div class="wrapper">
+          <%= render 'layouts/header' %>
+          <%= render 'layouts/sidebar' %>
+          <%= render 'layouts/content_wrapper' %>
+        </div>
       </body>
     <% else %>
       <%= render 'devise/sessions/new_session' %>
