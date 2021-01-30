@@ -14,10 +14,10 @@ class OutputDonatesController < ApplicationController
     @output = OutputMoney.new(output_params)
     respond_to do |format|
       if @output.save
-        format.html { redirect_to root_path, notice: 'Tweet was successfully created.' }
+        format.html { redirect_to output_donates_path, notice: 'Tweet was successfully created.' }
         format.json { render :index, status: :created, location: @output }
       else
-        format.html { redirect_to root_path, alert: 'Failed to create tweet.' }
+        format.html { redirect_to output_donates_path, alert: 'Failed to create tweet.' }
       end
     end
   end
@@ -31,7 +31,7 @@ class OutputDonatesController < ApplicationController
   def destroy
     @output.destroy
     respond_to do |format|
-      format.html { redirect_to root_path, notice: 'Data was successfully destroyed.' }
+      format.html { redirect_to output_donates_path, notice: 'Data was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
@@ -39,7 +39,7 @@ class OutputDonatesController < ApplicationController
   def update
     respond_to do |format|
       if @output.update(output_params)
-        format.html { redirect_to root_path, notice: 'Data was successfully updated.' }
+        format.html { redirect_to output_donates_path, notice: 'Data was successfully updated.' }
         format.json { render :index, status: :ok, location: @output }
       else
         format.html { render :edit }

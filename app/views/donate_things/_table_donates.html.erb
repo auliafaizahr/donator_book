@@ -13,7 +13,7 @@
   <tbody>
     <% @donate_things.each do |donate| %>
       <%= content_tag :tr, id: dom_id(donate) do %>
-        <td><%= donate.date_donate %></td>
+        <td><%= donate.date_donate.to_formatted_s(:long) %></td>
         <td><%= donate.donator %></td>
         <td><%= donate.category %></td>
         <td><%= donate.name %></td>

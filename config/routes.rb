@@ -12,6 +12,6 @@ Rails.application.routes.draw do
     # root :to => 'devise/sessions#new'
   end
 
-  root 'donates#index'
+  root 'dashboards#index'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

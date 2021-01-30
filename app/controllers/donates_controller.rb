@@ -18,10 +18,10 @@ class DonatesController < ApplicationController
     @donate = Donate.new(donate_params)
     respond_to do |format|
       if @donate.save
-        format.html { redirect_to root_path, notice: 'Tweet was successfully created.' }
+        format.html { redirect_to donates_path, notice: 'Tweet was successfully created.' }
         format.json { render :index, status: :created, location: @donate }
       else
-        format.html { redirect_to root_path, alert: 'Failed to create tweet.' }
+        format.html { redirect_to donates_path, alert: 'Failed to create tweet.' }
       end
     end
   end
@@ -35,7 +35,7 @@ class DonatesController < ApplicationController
   def update
     respond_to do |format|
       if @donate.update(donate_params)
-        format.html { redirect_to root_path, notice: 'Data was successfully updated.' }
+        format.html { redirect_to donates_path, notice: 'Data was successfully updated.' }
         format.json { render :index, status: :ok, location: @donate }
       else
         format.html { render :edit }
@@ -47,7 +47,7 @@ class DonatesController < ApplicationController
   def destroy
     @donate.destroy
     respond_to do |format|
-      format.html { redirect_to root_path, notice: 'Data was successfully destroyed.' }
+      format.html { redirect_to donates_path, notice: 'Data was successfully destroyed.' }
       format.json { head :no_content }
     end
   end

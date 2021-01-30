@@ -42,4 +42,9 @@ $(document).on('turbolinks:load', function() {
   window.onresize = function() {
     table.columns.adjust().responsive.recalc();
   }
+
+  setTimeout(function() {
+    $('.alert').slideUp();
+  }, 1000);
+
 } );

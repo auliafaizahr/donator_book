@@ -15,7 +15,7 @@
         <td><%= donate.category %></td>
         <td><%= donate.donator %></td>
         <td><%= donate.amount %></td>
-        <td><%= donate.date_donate %></td>
+        <td><%= donate.date_donate.to_formatted_s(:long) %></td>
         <td>
           <span>
             <%= link_to  'Edit', edit_donate_path(donate), remote: true, data: {toggle: "modal", target: "#donate-add"}, class: 'level-item' %>

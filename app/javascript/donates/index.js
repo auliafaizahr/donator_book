@@ -43,5 +43,9 @@ $(document).on('turbolinks:load', function() {
     table.columns.adjust().responsive.recalc();
   }
 
+  setTimeout(function() {
+    $('.alert').slideUp();
+  }, 1000);
+
 } );
 
