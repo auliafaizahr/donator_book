@@ -1,0 +1,34 @@
+<div class="col-12">
+  <div class="row">
+    <span class="border-bottom">
+    
+      <%= image_tag "https://lh3.googleusercontent.com/p/AF1QipME6lI1Dfc5eKMBuhfjHWb0mgtgM-Dg14YUV9TK=s1024-p-no-v1", class: "logo-header" %>
+    </span>
+  </div>
+
+  <div class="row">
+    <p>
+      Bismillahirrahmanirrahim, <br/>
+      Terimakasih kepada <b><%= @donate.donator %></b> atas kepercayaannya menitipkan donasinya  sebesar <b> <%= number_to_currency(@donate.amount, unit: "Rp ") %></b> kepada kami.
+
+      <br />
+      <br />
+
+      Semoga Allah membalas dengan pahala yang berlipat atas apa yang telah diberikan, menjadikannya suci dan mensucikan, serta Allah memberikan keberkahan atas harta yang tersisa. Aamin.
+    </p>
+  </div>
+
+  <div class="row">
+    <div class="col-6 float-right">
+      <p class="">
+        Cimahi, <%= @donate.date_donate.to_formatted_s(:long) %>
+        <br />
+        <br />
+        <br />
+        a.n Yayasan As Salam, <br />
+        M. Badri
+      </p>
+    </div>
+  </div>
+</div>
+

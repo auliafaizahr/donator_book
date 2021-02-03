@@ -23,6 +23,9 @@
           <span>
             <%= link_to 'Hapus', donate, method: :delete, data: { confirm: 'Are you sure want to delete this tweet?' }, remote: true %>
           </span>
+          <span>
+            <%= link_to "Download Ucapan", donate_path("#{donate.donator}_#{donate.date_donate}") %>
+          </span>
         </td>
       <% end %>
     <% end %>

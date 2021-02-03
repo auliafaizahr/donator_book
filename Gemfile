@@ -17,6 +17,9 @@ gem 'turbolinks', '~> 5'
 gem 'webpacker', '~> 4.0'
 gem 'serviceworker-rails'
 gem 'sprockets-rails', :require => 'sprockets/railtie'
+gem 'pdfkit'
+gem 'wkhtmltopdf-binary'
+gem 'render_anywhere'
 
 group :development, :test do
   gem 'factory_bot_rails'
