@@ -40,6 +40,7 @@ import '../donate_things/index'
 import '../output_donates/index'
 import '../dashboards/index'
 import '../alert'
+// import '../../assets/stylesheets/application.scss'
 
 // $('body,html').click(function(e){
 //   if ($('body').hasClass("sidebar-open")) {
