@@ -2,32 +2,37 @@ class DonatesController < ApplicationController
   before_action :authenticate_user!
   before_action :set_donate, only: [:destroy, :edit, :update, :download]
   before_action :set_donate_pdf, only: [:show]
+  
   def index
     @donates = Donate.all
    
-    # kit.to_file("../hello.pdf")
     respond_to do |format|
       format.html
       format.js
-      # format.pdf { render :text => PDFKit.new( donate_path(@donates)).to_pdf }
     end
   end
 
   def show
     respond_to do |format|
-      format.html { render layout: 'donate_pdf' }
-      format.pdf {
-        # render layout: false
-        html = render_to_string(:layout => false , :action => "show.pdf.erb") # your view erb files goes to :action 
-        kit = PDFKit.new(html)
-        file = kit.to_file(Rails.root +  "#{@donate.donator}.pdf" )
-
-        kit.stylesheets << "#{Rails.root}/app/assets/stylesheets/application.scss"
-        send_file(kit.to_pdf, :filename=>"#{@donate.id}.pdf",
-          :type => 'application/pdf', :disposition => 'inline')
-      }
+      format.html { render layout: false }
+      format.pdf do
+        render pdf: "#{@donate.donator}_#{@donate.date_donate}",
+        page_height: "15cm",
+        page_width: "15cm",
+        margin_top:     '10',
+        margin_left:    '10',
+        margin_right:   '10',
+        margin_bottom:  '10',
+        template: "donates/show.html.erb",
+        layout: "donate_pdf.html.erb",
+        lowquality: false,
+        show_as_html: params.key?('debug'),
+        page_size: nil
+        
+      end
     end
   end
+
 
   # def download
   #   binding.pry

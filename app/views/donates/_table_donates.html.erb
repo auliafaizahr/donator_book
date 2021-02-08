@@ -4,8 +4,8 @@
     <tr role="row">
       <th>Kategori</th>
       <th>Donator</th>
-      <th>Amount</th>
-      <th>Date</th>
+      <th>Jumlah</th>
+      <th>Tanggal</th>
       <th>Aksi</th>
     </tr>
   </thead>
@@ -21,10 +21,10 @@
             <%= link_to  'Edit', edit_donate_path(donate), remote: true, data: {toggle: "modal", target: "#donate-add"}, class: 'level-item' %>
           </span>
           <span>
-            <%= link_to 'Hapus', donate, method: :delete, data: { confirm: 'Are you sure want to delete this tweet?' }, remote: true %>
+            <%= link_to 'Hapus', donate, method: :delete, data: { confirm: 'Yakin menghapus data?' }, remote: true %>
           </span>
           <span>
-            <%= link_to "Download Ucapan", donate_path("#{donate.donator}_#{donate.date_donate}") %>
+            <%= link_to "Download Ucapan", donate_path("#{donate.donator}_#{donate.date_donate}", format: :pdf) %>
           </span>
         </td>
       <% end %>

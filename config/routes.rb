@@ -2,17 +2,12 @@ Rails.application.routes.draw do
 
   resources :donates do
     get 'download', to: 'donates#download'
-
-    # collection do
-    #   get 'download', to: 'donates#download'
-    # end
   end
 
   resources :invoices
 
   resources :donate_things do
     get 'download'
-    # get 'download', to: 'donate_things#download'
   end
 
   resources :output_donates

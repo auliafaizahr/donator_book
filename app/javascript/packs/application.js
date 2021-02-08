@@ -40,17 +40,8 @@ import '../donate_things/index'
 import '../output_donates/index'
 import '../dashboards/index'
 import '../alert'
-// import '../../assets/stylesheets/application.scss'
+import '../../assets/stylesheets/pdf.scss'
 
-// $('body,html').click(function(e){
-//   if ($('body').hasClass("sidebar-open")) {
-//     $('body').addClass("sidebar-closed");
-//     $('body').removeClass("sidebar-collapse");
-//     $('body').removeClass("sidebar-open");
-//   }
-// });
-
-// import './alert'
 
 // Uncomment to copy all static images under ../images to the output folder and reference
 // them with the image_pack_tag helper in views (e.g <%= image_pack_tag 'rails.png' %>)
