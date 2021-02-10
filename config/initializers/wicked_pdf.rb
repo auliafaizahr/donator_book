@@ -1,9 +1,12 @@
+if Rails.env.production?
+  wkhtmltopdf_path = "#{Rails.root}/bin/wkhtmltopdf"
+else
+  wkhtmltopdf_path = "/home/auliafaizahr/.rvm/gems/ruby-2.6.3/bin/wkhtmltopdf"
+end
+
 WickedPdf.config = {
-  if Rails.env.production?
-    exe_path: "#{Rails.root}/bin/wkhtmltopdf"
-  else
-    exe_path: '/home/auliafaizahr/.rvm/gems/ruby-2.6.3/bin/wkhtmltopdf'
-  end
+  exe_path: wkhtmltopdf_path,
+  wkhtmltopdf: wkhtmltopdf_path,
   enable_local_file_access: true,
   page_height: 110,
   page_width: 110,
