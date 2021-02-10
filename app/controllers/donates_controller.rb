@@ -24,9 +24,11 @@ class DonatesController < ApplicationController
         margin_right:   '10',
         margin_bottom:  '10',
         template: "donates/show.html.erb",
-        layout: "donate_pdf.html.erb",
+        layout: "layouts/donate_pdf.html.erb",
         lowquality: false,
         show_as_html: params.key?('debug'),
+        background: true,
+        no_background: false,
         page_size: nil
         
       end

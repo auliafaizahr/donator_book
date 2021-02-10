@@ -18,7 +18,7 @@ $(document).on('turbolinks:load', function() {
 
       // Total over all pages
       total = api
-          .column( 2 )
+          .column( 1 )
           .data()
           .reduce( function (a, b) {
               return intVal(a) + intVal(b);
@@ -26,14 +26,14 @@ $(document).on('turbolinks:load', function() {
 
       // Total over this page
       pageTotal = api
-          .column( 2, { page: 'current'} )
+          .column( 1, { page: 'current'} )
           .data()
           .reduce( function (a, b) {
               return intVal(a) + intVal(b);
           }, 0 );
 
       // Update footer
-    $( api.column( 2 ).footer() ).html(
+    $( api.column( 1 ).footer() ).html(
           'Rp'+pageTotal +' ( Rp '+ total +' total)'
       );
     }
