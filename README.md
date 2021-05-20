@@ -1,24 +1,13 @@
 # README
+Donator Book is an app to record donations and where its allocated to. It have two roles; including admin, and user.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### Technology I use
+* Ruby on Rails
+  * Ruby ver : 2.6.3
+  * Rails ver : 6.0.3
+* Javascript
+* Jquery
+* Bootstrap
+* Webpack
+* PostgresQL
+* Heroku
